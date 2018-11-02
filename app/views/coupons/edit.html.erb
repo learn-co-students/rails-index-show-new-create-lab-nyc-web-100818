@@ -1,0 +1,14 @@
+<h1>Edit Your Coupon</h1>
+
+<form action="/coupons/<%= @coupon.id %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <label>What's the new Coupon Code?</label>
+  <input type="text" name="coupon[coupon_code]" value="<%= @coupon.coupon_code %>">
+  <br>
+  <br>
+  <label>What's the New Store?</label>
+  <input type="text" name="coupon[store]" value="<%= @coupon.store %>">
+  <br>
+  <br>
+  <input type="submit">
+</form>
