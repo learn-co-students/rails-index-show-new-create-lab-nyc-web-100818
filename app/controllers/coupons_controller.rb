@@ -1,0 +1,38 @@
+require 'byebug'
+class CouponsController < ApplicationController
+  # before_action :show_coupon, only: [:show, :edit]
+
+  def index
+    @coupons = Coupon.all
+  end
+
+  def show
+    @coupon = Coupon.find(params[:id])
+  end
+
+  def create
+    # byebug
+    @coupon = Coupon.new
+    @coupon.coupon_code = params[:coupon][:coupon_code]
+    @coupon.store = params[:coupon][:store]
+    @coupon.save
+    redirect_to coupon_path(@coupon)
+  end
+
+  def new
+    @coupon = Coupon.new
+    # byebug
+  end
+
+  def edit
+
+  end
+
+
+
+
+
+
+
+
+end
