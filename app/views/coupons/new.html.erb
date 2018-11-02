@@ -1,0 +1,8 @@
+<h1>Coupon Form</h1>
+
+<%= form_tag  coupons_path %>
+  <input type="text" name="coupon[coupon_code]" placeholder="put in ur coooopon code">
+  <input type="text" name="coupon[store]" placeholder="store name">
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit Coupon">
