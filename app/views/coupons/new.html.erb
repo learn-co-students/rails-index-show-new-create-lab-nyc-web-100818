@@ -1,0 +1,6 @@
+<form class="" action="/coupons" method="post">
+  <label><input type="text" name="coupon_code" placeholder="coupon code"></label>
+  <label><input type="text" name="store" placeholder="store name"></label>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" name="Submit">
+</form>
